@@ -42,6 +42,20 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HonduRutas.Data\HonduRutas.Data.csproj">
+      <Project>{fe7762d9-5bf3-4f82-82bd-e497eff05eef}</Project>
+      <Name>HonduRutas.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HonduRutas.Domain\HonduRutas.Domain.csproj">
+      <Project>{6be3c43c-3574-4d2d-8db9-1af4864210a2}</Project>
+      <Name>HonduRutas.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HonduRutas\HonduRutas.ServiceModel\HonduRutas.ServiceModel.csproj">
+      <Project>{53e82ac1-dd1d-4c66-b55f-f9f4acfb2f40}</Project>
+      <Name>HonduRutas.ServiceModel</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

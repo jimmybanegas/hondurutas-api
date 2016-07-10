@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Agencies\AgenciesAppService.cs" />
+    <Compile Include="Services\Agencies\IAgenciesAppService.cs" />
     <Compile Include="Services\Routes\IRoutesAppService.cs" />
     <Compile Include="Services\Routes\RoutesAppService.cs" />
   </ItemGroup>

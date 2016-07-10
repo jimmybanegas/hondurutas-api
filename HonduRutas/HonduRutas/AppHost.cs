@@ -10,6 +10,7 @@ using HonduRutas.Domain.Contracts;
 using System.Data.Entity;
 using HonduRutas.Application.Services.Routes;
 using HonduRutas.ServiceInterface.Services;
+using HonduRutas.Application.Services.Agencies;
 
 namespace HonduRutas
 {
@@ -49,6 +50,7 @@ namespace HonduRutas
         private void ConfigureApplicationLayerDependencies(ContainerBuilder container)
         {
             container.RegisterType<RoutesAppService>().As<IRoutesAppService>();
+            container.RegisterType<AgenciesAppService>().As<IAgenciesAppService>();
         }
 
         /// <summary>

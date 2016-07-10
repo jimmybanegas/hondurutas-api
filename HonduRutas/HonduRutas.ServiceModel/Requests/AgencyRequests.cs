@@ -1,10 +1,14 @@
-﻿using System.Collections.Generic;
-using HonduRutas.Domain.Contracts;
+﻿using ServiceStack;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace HonduRutas.Domain.Entities
+namespace HonduRutas.ServiceModel.Requests
 {
-    //This entity is required
-    public class Agency : BaseEntity
+    [Route("/agencies", "POST")]
+    public class CreateAgency
     {
         public string AgencyId { get; set; }
 
@@ -17,8 +21,6 @@ namespace HonduRutas.Domain.Entities
         public string AgencyPhone { get; set; }
 
         public string AgencyFareUrl { get; set; }
-
-        public ICollection<Route> Routes { get; set; }
 
     }
 }

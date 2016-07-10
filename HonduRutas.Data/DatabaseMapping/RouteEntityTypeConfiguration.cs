@@ -19,8 +19,8 @@ namespace HonduRutas.Data.DatabaseMapping
             HasKey(u => u.RouteId);
 
             //Columns
-            Property(u => u.RouteId).HasColumnName("RouteId").IsRequired().HasMaxLength(100);
-            Property(u => u.AgencyId).HasColumnName("AgencyId").HasMaxLength(100);
+            Property(u => u.RouteId).HasColumnName("RouteId").IsRequired();
+            Property(u => u.AgencyId).HasColumnName("AgencyId").IsRequired().HasMaxLength(100);
             Property(u => u.RouteShortName).HasColumnName("RouteShortName").HasMaxLength(50);
             Property(u => u.RouteLongName).HasColumnName("RouteLongName").HasMaxLength(250);
             Property(u => u.RouteDesc).HasColumnName("RouteDesc").HasMaxLength(1024);

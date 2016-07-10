@@ -1,4 +1,5 @@
-﻿using HonduRutas.ServiceModel.Requests;
+﻿using HonduRutas.ServiceModel.DTO.Transit;
+using HonduRutas.ServiceModel.Requests;
 using System;
 
 namespace HonduRutas.Application.Services.Routes
@@ -12,5 +13,7 @@ namespace HonduRutas.Application.Services.Routes
         /// Creates a new route
         /// </summary>
         void CreateRoute(CreateRoute request);
+        RouteDTO GetRoute(GetRoute request);
+        RouteDTO RemoveRoute(RemoveRoute request);
     }
 }

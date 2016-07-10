@@ -7,7 +7,7 @@ namespace HonduRutas.Domain.Entities
     //This entity is required
     public class Route : BaseEntity
     {
-        public string RouteId { get; set; }
+        public int RouteId { get; set; }
 
         public string AgencyId { get; set; }
 
@@ -26,7 +26,7 @@ namespace HonduRutas.Domain.Entities
         public string RouteTextColor { get; set; }
 
         // TODO: Setup a mapping for these entities before attempting to commit changes to the database
-        //public virtual Agency Agency { get; set; }
+        public virtual Agency Agency { get; set; }
 
         //public virtual  ICollection<Trip> Trips { get; set; }
 

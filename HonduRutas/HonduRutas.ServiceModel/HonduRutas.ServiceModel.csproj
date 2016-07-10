@@ -44,8 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTO\Transit\RouteDTO.cs" />
     <Compile Include="DTO\Transit\StopDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requests\AgencyRequests.cs" />
     <Compile Include="Requests\AwakeRequests.cs" />
     <Compile Include="Requests\RouteRequests.cs" />
   </ItemGroup>

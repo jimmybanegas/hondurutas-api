@@ -17,11 +17,13 @@ namespace HonduRutas.Data
             Database.SetInitializer<APIContext>(null);
         }
         public IDbSet<Route> Tests { get; set; }
+        public IDbSet<Agency> Agencies { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Configurations.Add(new RouteEntityTypeConfiguration());
+            modelBuilder.Configurations.Add(new AgencyEntityTypeConfiguration());
         }
     }
 }

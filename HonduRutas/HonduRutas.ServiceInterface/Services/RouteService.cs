@@ -26,5 +26,15 @@ namespace HonduRutas.ServiceInterface.Services
             _routesAppService.CreateRoute(request);
             return "Sucessfully created route";
         }
+
+        public object Get(GetRoute request)
+        {
+            return _routesAppService.GetRoute(request);
+        }
+
+        public object Delete(RemoveRoute request)
+        {
+            return _routesAppService.RemoveRoute(request);
+        }
     }
 }

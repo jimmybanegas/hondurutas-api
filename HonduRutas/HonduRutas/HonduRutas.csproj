@@ -41,15 +41,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GtfsRealtimeBindings, Version=0.0.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GtfsRealtimeBindings.0.0.3.0\lib\net40\GtfsRealtimeBindings.dll</HintPath>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper, Version=5.0.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\AutoMapper.5.0.2\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="protobuf-net, Version=2.0.0.668, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\protobuf-net.2.0.0.668\lib\net40\protobuf-net.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="ServiceStack, Version=4.0.60.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\ServiceStack.4.0.60\lib\net40\ServiceStack.dll</HintPath>
       <Private>True</Private>
@@ -109,6 +117,18 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\HonduRutas.Application\HonduRutas.Application.csproj">
+      <Project>{779bffac-782b-4620-a9a5-2473fe1deec0}</Project>
+      <Name>HonduRutas.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HonduRutas.Data\HonduRutas.Data.csproj">
+      <Project>{fe7762d9-5bf3-4f82-82bd-e497eff05eef}</Project>
+      <Name>HonduRutas.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HonduRutas.Domain\HonduRutas.Domain.csproj">
+      <Project>{6be3c43c-3574-4d2d-8db9-1af4864210a2}</Project>
+      <Name>HonduRutas.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HonduRutas.ServiceInterface\HonduRutas.ServiceInterface.csproj">
       <Project>{801a0f89-d5f6-49a6-bcea-6624388c98a4}</Project>
       <Name>HonduRutas.ServiceInterface</Name>
@@ -132,13 +152,16 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapters\AutofacContainerAdapter.cs" />
     <Compile Include="AppHost.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Config\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

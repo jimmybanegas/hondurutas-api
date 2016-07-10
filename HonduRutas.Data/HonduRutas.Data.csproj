@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="APIContext.cs" />
     <Compile Include="ContractImplementation\BaseDisposable.cs" />
     <Compile Include="ContractImplementation\Repository.cs" />
     <Compile Include="ContractImplementation\UnitOfWork.cs" />

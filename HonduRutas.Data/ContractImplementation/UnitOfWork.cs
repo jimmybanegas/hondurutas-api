@@ -10,12 +10,19 @@ namespace HonduRutas.Data.ContractImplementation
 {
     public class UnitOfWork : DisposableBase, IUnitOfWork
     {
+        /// <summary>
+        /// Entity Frameworks equivalent to the UnitOfWork
+        /// </summary>
         protected DbContext Context { get; set; }
 
         public UnitOfWork(DbContext context)
         {
             Context = context;
         }
+
+        /// <summary>
+        /// Implementation of the SaveChanges contract, it would use the Unit of Work
+        /// </summary>
         public void SaveChanges()
         {
             Context.SaveChanges();

@@ -53,6 +53,7 @@
     <Compile Include="ContractImplementation\BaseDisposable.cs" />
     <Compile Include="ContractImplementation\Repository.cs" />
     <Compile Include="ContractImplementation\UnitOfWork.cs" />
+    <Compile Include="DatabaseMapping\RouteEntityTypeConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

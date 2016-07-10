@@ -21,9 +21,10 @@ namespace HonduRutas.ServiceInterface.Services
             _routesAppService = routesAppService;
         }
 
-        public void Post(CreateRoute request)
+        public string Post(CreateRoute request)
         {
             _routesAppService.CreateRoute(request);
+            return "Sucessfully created route";
         }
     }
 }

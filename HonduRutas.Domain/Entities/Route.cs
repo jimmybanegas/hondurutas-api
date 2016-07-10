@@ -25,9 +25,10 @@ namespace HonduRutas.Domain.Entities
 
         public string RouteTextColor { get; set; }
 
-        public virtual Agency Agency { get; set; }
+        // TODO: Setup a mapping for these entities before attempting to commit changes to the database
+        //public virtual Agency Agency { get; set; }
 
-        public virtual  ICollection<Trip> Trips { get; set; }
+        //public virtual  ICollection<Trip> Trips { get; set; }
 
     }
 }

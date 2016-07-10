@@ -21,9 +21,16 @@ namespace HonduRutas.Application.Services.Routes
 
             _routesRepository = routesRepository;
         }
+
         public void CreateRoute(CreateRoute request)
         {
-            throw new NotImplementedException();
+            var newRoutes = new Route()
+            {
+                RouteId = "test"
+            };
+            _routesRepository.Insert(newRoutes);
+
+            _routesRepository.UnitOfWork.SaveChanges();
         }
 
         protected override void Dispose(bool disposing)

@@ -137,6 +137,7 @@ publish/
 ## web deploy settings but do note that will include unencrypted
 ## passwords
 *.pubxml
+*.Release.config
 
 *.publishproj
 

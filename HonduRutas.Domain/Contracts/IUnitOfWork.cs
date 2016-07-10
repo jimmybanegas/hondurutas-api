@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HonduRutas.Domain
+namespace HonduRutas.Domain.Contracts
 {
-    public class Class1
+    public interface IUnitOfWork : IDisposable
     {
+        void SaveChanges();
     }
 }

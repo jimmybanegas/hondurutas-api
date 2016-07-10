@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
+using HonduRutas.Domain.Contracts;
 
 namespace HonduRutas.Domain.Entities
 {
     //This entity is required
-    public class Stop  : IEntity
+    public class Stop  : BaseEntity
     {
         public string StopId { get; set; }
 
@@ -27,10 +28,7 @@ namespace HonduRutas.Domain.Entities
 
         public string StopTimezone { get; set; }
 
-        public virtual ICollection<StopTime> _Stop_times { get; set; }
-        public bool IsValid(out ICollection<string> erroresValidacion)
-        {
-            throw new System.NotImplementedException();
-        }
+        public virtual ICollection<StopTime> StopTimes { get; set; }
+ 
     }
 }

@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
+using HonduRutas.Domain.Contracts;
 
 namespace HonduRutas.Domain.Entities
 {
     //This entity is required
-    public class Agency : IEntity
+    public class Agency : BaseEntity
     {
         public string AgencyId { get; set; }
 
@@ -21,9 +22,5 @@ namespace HonduRutas.Domain.Entities
 
         public ICollection<Route> Routes { get; set; }
 
-        public bool IsValid(out ICollection<string> erroresValidacion)
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }

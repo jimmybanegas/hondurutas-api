@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
+using HonduRutas.Domain.Contracts;
 
 namespace HonduRutas.Domain.Entities
 {
     //This entity is required
-    public class Calendar : IEntity
+    public class Calendar : BaseEntity
     {
-        public string CalendarId { get; set; }
+        public string ServiceId { get; set; }
 
         public bool Monday { get; set; }
 
@@ -27,9 +28,5 @@ namespace HonduRutas.Domain.Entities
 
         public virtual ICollection<Trip> Trips { get; set; }
 
-        public bool IsValid(out ICollection<string> erroresValidacion)
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }

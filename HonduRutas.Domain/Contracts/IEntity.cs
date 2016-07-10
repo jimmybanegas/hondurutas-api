@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HonduRutas.Domain
+namespace HonduRutas.Domain.Contracts
 {
     /// <summary>
-    /// Define comportamiento que deben exponer todas las entidades.
+    /// Contract for all entities
     /// </summary>
     public interface IEntity
     {
-      
+
     }
 }

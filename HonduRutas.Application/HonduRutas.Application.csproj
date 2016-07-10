@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Routes\IRoutesAppService.cs" />
+    <Compile Include="Services\Routes\RoutesAppService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HonduRutas.Data\HonduRutas.Data.csproj">

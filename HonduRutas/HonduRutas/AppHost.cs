@@ -9,6 +9,8 @@ using HonduRutas.Data;
 using HonduRutas.Data.ContractImplementation;
 using HonduRutas.Domain.Contracts;
 using System.Data.Entity;
+using System;
+using HonduRutas.Application.Services.Routes;
 
 namespace HonduRutas
 {
@@ -40,10 +42,20 @@ namespace HonduRutas
             ));
 
             ConfigureDataDependencies(builder);
+            ConfigureApplicationLayerDependencies(builder);
 
             container.Adapter = new AutofacContainerAdapter(builder.Build());
         }
 
+        private void ConfigureApplicationLayerDependencies(ContainerBuilder container)
+        {
+            container.RegisterType<RoutesAppService>().As<IRoutesAppService>();
+        }
+
+        /// <summary>
+        /// Register implementations for Data related interfaces
+        /// </summary>
+        /// <param name="builder"></param>
         private void ConfigureDataDependencies(ContainerBuilder builder)
         {
             var context = new APIContext();

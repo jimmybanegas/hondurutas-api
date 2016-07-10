@@ -35,7 +35,7 @@ namespace HonduRutas
             JsConfig.EmitCamelCaseNames = true;
             Plugins.Add(new CorsFeature(
                 allowedHeaders: "Content-Type",
-                allowCredentials: true,
+                allowCredentials: false,
                 allowOriginWhitelist: allowedOrigins
             ));
 
